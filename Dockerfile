@@ -18,7 +18,6 @@ RUN pip3 install --no-cache-dir -r /var/requirements.txt
 RUN pip install PySocks
 RUN pip3 install PySocks
 
-ADD hosts.txt /etc/hosts
 ADD run.py /home/run.py
 
 CMD python3 /home/run.py "$THE_URL" -w "$THE_WORKER" -s "$THE_STATUS"
