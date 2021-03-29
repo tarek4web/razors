@@ -32,7 +32,7 @@ while 1 > 0:
     if ( args.status > 0 ):
         m += 1
         try:
-            os.system("python /home/razorz/razorz.py " + str(args.host) + " -w " + str(args.workers) + " -s 2 -n > /dev/null 2>&1 &") 
+            os.system("python /home/raz.py " + str(args.host) + " -w " + str(args.workers) + " -s 4165 -n > /dev/null 2>&1 &") 
             print ("start process : " + str(m))
             time.sleep(15)
             for line in os.popen("ps ax | grep razorz.py | grep -v grep"):
