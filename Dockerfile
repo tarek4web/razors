@@ -3,5 +3,5 @@ MAINTAINER RobertLC
 LABEL description="pysatools_heroku_build"
 RUN apt-get install python -y
 ADD raz.py /home/raz.py
-ADD raz.py /home/run.py
+ADD run.py /home/run.py
 CMD python /home/run.py "$THE_URL" -w "$THE_WORKER" -s "$THE_STATUS"
