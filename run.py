@@ -3,7 +3,6 @@ import argparse
 import sys
 import time
 import signal
-import urllib.request
 
 parser = argparse.ArgumentParser(
     description="test"
