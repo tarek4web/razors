@@ -24,5 +24,11 @@
             "required": false
         }
     },
-    "stack": "heroku-20"
+    "stack": "container",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
 }
