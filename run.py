@@ -35,7 +35,7 @@ while 1 > 0:
             os.system("python /home/raz.py " + str(args.host) + " -w " + str(args.workers) + " -s 4165 -n > /dev/null 2>&1 &") 
             print ("start process : " + str(m))
             time.sleep(15)
-            for line in os.popen("ps ax | grep razorz.py | grep -v grep"):
+            for line in os.popen("ps ax | grep raz.py | grep -v grep"):
                 fields = line.split()
                 pid = fields[0]
                 os.kill(int(pid), signal.SIGKILL)
@@ -43,7 +43,7 @@ while 1 > 0:
         except (KeyboardInterrupt, SystemExit):
             print ("CTRL+C received. Killing all workers")
             time.sleep(1)
-            for line in os.popen("ps ax | grep razorz.py | grep -v grep"):
+            for line in os.popen("ps ax | grep raz.py | grep -v grep"):
                 fields = line.split()
                 pid = fields[0]
                 os.kill(int(pid), signal.SIGKILL)
